@@ -98,7 +98,7 @@ function addNewTask(data) {
     .filter(
       (e) => e.categoryUUID === document.querySelector('.active').dataset.uuid
     )[0]
-    .categoryTasks.push(data);
+    .categoryTasks.unshift(data);
 
   changeCategoryTasks(active);
   menuView.render(state);

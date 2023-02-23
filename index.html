@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/img/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer type="module" src="src/js/controller.js"></script>
+    <title>Todoapp</title>
+  </head>
+  <body>
+    <div class="newcategory__container hidden">
+      <div class="form">
+        <div class="newcategory__form">
+          <input
+            class="newcategory__form__input"
+            type="text"
+            placeholder="Category name (max 25 characters)"
+          />
+          <div class="newcategory-icon">
+            <div class="newcategory-icon-colors"></div>
+            <div class="newcategory-icon-form"></div>
+          </div>
+        </div>
+
+        <div class="newcategory-selections">
+          <div class="newcategory-selection newcategory-selection-colors">
+            <label for="">Colors</label>
+            <div class="selection selection-colors">
+              <input type="radio" name="colors" id="white" checked />
+              <label for="white"><div class="color white"></div></label>
+              <input type="radio" name="colors" id="gray" />
+              <label for="gray"><div class="color gray"></div></label>
+              <input type="radio" name="colors" id="red" />
+              <label for="red"><div class="color red"></div></label>
+              <input type="radio" name="colors" id="pink" />
+              <label for="pink"><div class="color pink"></div></label>
+              <input type="radio" name="colors" id="grape" />
+              <label for="grape"><div class="color grape"></div></label>
+              <input type="radio" name="colors" id="violet" />
+              <label for="violet"><div class="color violet"></div></label>
+              <input type="radio" name="colors" id="indigo" />
+              <label for="indigo"><div class="color indigo"></div></label>
+              <input type="radio" name="colors" id="blue" />
+              <label for="blue"><div class="color blue"></div></label>
+              <input type="radio" name="colors" id="cyan" />
+              <label for="cyan"><div class="color cyan"></div></label>
+              <input type="radio" name="colors" id="teal" />
+              <label for="teal"><div class="color teal"></div></label>
+              <input type="radio" name="colors" id="green" />
+              <label for="green"><div class="color green"></div></label>
+              <input type="radio" name="colors" id="lime" />
+              <label for="lime"><div class="color lime"></div></label>
+              <input type="radio" name="colors" id="yellow" />
+              <label for="yellow"><div class="color yellow"></div></label>
+              <input type="radio" name="colors" id="orange" />
+              <label for="orange"><div class="color orange"></div></label>
+              <input type="radio" name="colors" id="redpink" />
+              <label for="redpink"><div class="color redpink"></div></label>
+            </div>
+          </div>
+          <div class="newcategory-selection newcategory-selection-icon">
+            <label for="">Icon</label>
+            <div class="selection selection-icon">
+              <input type="radio" name="icon" id="default" checked />
+              <label for="default"
+                ><svg>
+                  <use href="src/img/icons.svg#default"></use>
+                </svg>
+              </label>
+              <input type="radio" name="icon" id="academic" />
+              <label for="academic"
+                ><svg>
+                  <use href="src/img/icons.svg#academic"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="book" />
+              <label for="book"
+                ><svg>
+                  <use href="src/img/icons.svg#book"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="love" />
+              <label for="love">
+                <svg>
+                  <use href="src/img/icons.svg#love"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="rocket" />
+              <label for="rocket"
+                ><svg>
+                  <use href="src/img/icons.svg#rocket"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="map" />
+              <label for="map">
+                <svg>
+                  <use href="src/img/icons.svg#map"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="user" />
+              <label for="user"
+                ><svg>
+                  <use href="src/img/icons.svg#user"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="star" />
+              <label for="star">
+                <svg>
+                  <use href="src/img/icons.svg#star"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="sparkles" />
+              <label for="sparkles">
+                <svg>
+                  <use href="src/img/icons.svg#sparkles"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="shopping" />
+              <label for="shopping"
+                ><svg>
+                  <use href="src/img/icons.svg#shopping"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="code" />
+              <label for="code">
+                <svg>
+                  <use href="src/img/icons.svg#code"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="cloud" />
+              <label for="cloud">
+                <svg>
+                  <use href="src/img/icons.svg#cloud"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="gift" />
+              <label for="gift"
+                ><svg>
+                  <use href="src/img/icons.svg#gift"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="money" />
+              <label for="money">
+                <svg>
+                  <use href="src/img/icons.svg#money"></use>
+                </svg>
+              </label>
+
+              <input type="radio" name="icon" id="bolt" />
+              <label for="bolt">
+                <svg>
+                  <use href="src/img/icons.svg#bolt"></use>
+                </svg>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="newcategory-finish">
+          <button class="newcategory__button newcategory__button-cancel">
+            Cancel
+          </button>
+          <button class="newcategory__button newcategory__button-done">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="menu">
+        <div class="menu-wrapper">
+          <header>
+            <div class="logo">
+              <div class="logo-circle"></div>
+              <span class="logo-name">TODO</span>
+            </div>
+            <div class="menu-close">
+              <svg>
+                <use href="src/img/icons.svg#menu-close"></use>
+              </svg>
+            </div>
+          </header>
+          <div class="categories"></div>
+        </div>
+      </div>
+      <div class="tasks">
+        <div class="task__category"></div>
+
+        <div class="task__list">
+          <label for="newtask">
+            <div class="newtask">
+              <div class="task__info">
+                <div class="addtask">
+                  <svg class="w-6 h-6 addtask-icon">
+                    <use href="src/img/icons.svg#plus"></use>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="newtask"
+                  class="addtaskinput"
+                  placeholder="Add a new task (max 50 characters)"
+                />
+              </div>
+            </div>
+          </label>
+
+          <div class="tasks__container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

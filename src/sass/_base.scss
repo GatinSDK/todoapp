@@ -1,0 +1,320 @@
+// Colors
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+  // dark
+  --font-color-dark: #fff;
+  --menu-background-dark: #151619;
+  --primary-color-dark: #202127;
+  --secondary-color-dark: #2f3137;
+  --hover-border-color-dark: 1px solid rgba(255, 255, 255, 0.1);
+  --background-button-color: #202127;
+
+  //light
+  // --font-color-light: #2c2c2c;
+  // --menu-background-light:
+  // --primary-color-light:
+  // --secondary-color-light:
+  // --hover-border-color-light:
+
+  --tasks-background-gradient: linear-gradient(
+      152.25deg,
+      rgba(53, 193, 109, 0.12) 0.83%,
+      rgba(32, 33, 39, 0) 66.94%
+    ),
+    #202127;
+
+  // Icons color
+
+  --icon-color-default: #fff;
+  --icon-color-gray: #495057;
+  --icon-color-red: #f03e3e;
+  --icon-color-pink: #d6336c;
+  --icon-color-grape: #ae3ec9;
+  --icon-color-violet: #7048e8;
+  --icon-color-indigo: #4263eb;
+  --icon-color-blue: #1c7ed6;
+  --icon-color-cyan: #1098ad;
+  --icon-color-teal: #0ca678;
+  --icon-color-green: #37b24d;
+  --icon-color-lime: #74b816;
+  --icon-color-yellow: #f59f00;
+  --icon-color-orange: #f76707;
+  --icon-color-redpink: #ff004c;
+
+  // menu buttons color
+  --menu-button-gradient-white: linear-gradient(
+      90deg,
+      var(--gradient-white) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-white: rgba(255, 255, 255, 0.12);
+
+  --menu-button-gradient-gray: linear-gradient(
+      90deg,
+      var(--gradient-gray) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-gray: rgba(73, 80, 87, 0.12);
+
+  --menu-button-gradient-red: linear-gradient(
+      90deg,
+      var(--gradient-red) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-red: rgba(240, 62, 62, 0.12);
+
+  --menu-button-gradient-pink: linear-gradient(
+      90deg,
+      var(--gradient-pink) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-pink: rgba(214, 51, 108, 0.12);
+
+  --menu-button-gradient-grape: linear-gradient(
+      90deg,
+      var(--gradient-grape) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-grape: rgba(173, 62, 201, 0.12);
+
+  --menu-button-gradient-violet: linear-gradient(
+      90deg,
+      var(--gradient-violet) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-violet: rgba(112, 72, 232, 0.12);
+
+  --menu-button-gradient-indigo: linear-gradient(
+      90deg,
+      var(--gradient-indigo) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-indigo: rgba(66, 100, 235, 0.12);
+
+  --menu-button-gradient-blue: linear-gradient(
+      90deg,
+      var(--gradient-blue) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-blue: rgba(28, 127, 214, 0.12);
+
+  --menu-button-gradient-cyan: linear-gradient(
+      90deg,
+      var(--gradient-cyan) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-cyan: rgba(16, 152, 173, 0.12);
+
+  --menu-button-gradient-teal: linear-gradient(
+      90deg,
+      var(--gradient-teal) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-teal: rgba(12, 166, 120, 0.12);
+
+  --menu-button-gradient-green: linear-gradient(
+      90deg,
+      var(--gradient-green) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-green: rgba(55, 178, 78, 0.12);
+
+  --menu-button-gradient-lime: linear-gradient(
+      90deg,
+      var(--gradient-lime) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-lime: rgba(117, 184, 22, 0.12);
+
+  --menu-button-gradient-yellow: linear-gradient(
+      90deg,
+      var(--gradient-yellow) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-yellow: rgba(245, 159, 0, 0.12);
+
+  --menu-button-gradient-orange: linear-gradient(
+      90deg,
+      var(--gradient-orange) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-orange: rgba(247, 103, 7, 0.12);
+
+  --menu-button-gradient-redpink: linear-gradient(
+      90deg,
+      var(--gradient-redpink) 0%,
+      transparent 49.81%
+    ),
+    transparent;
+
+  --gradient-redpink: rgba(255, 0, 76, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--font-color-dark);
+  background-color: #1d1d1d;
+}
+
+.hidden {
+  display: none;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+svg {
+  display: block;
+  height: 2.4em;
+
+  &.white {
+    fill: var(--icon-color-default);
+  }
+
+  &.gray {
+    fill: var(--icon-color-gray);
+  }
+
+  &.red {
+    fill: var(--icon-color-red);
+  }
+
+  &.pink {
+    fill: var(--icon-color-pink);
+  }
+
+  &.grape {
+    fill: var(--icon-color-grape);
+  }
+
+  &.violet {
+    fill: var(--icon-color-violet);
+  }
+
+  &.indigo {
+    fill: var(--icon-color-indigo);
+  }
+
+  &.blue {
+    fill: var(--icon-color-blue);
+  }
+
+  &.cyan {
+    fill: var(--icon-color-cyan);
+  }
+
+  &.teal {
+    fill: var(--icon-color-teal);
+  }
+
+  &.green {
+    fill: var(--icon-color-green);
+  }
+
+  &.lime {
+    fill: var(--icon-color-lime);
+  }
+
+  &.yellow {
+    fill: var(--icon-color-yellow);
+  }
+
+  &.orange {
+    fill: var(--icon-color-orange);
+  }
+
+  &.redpink {
+    fill: var(--icon-color-redpink);
+  }
+}
+
+.container {
+  display: flex;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+// ::-webkit-scrollbar-track {
+//   // background: #f1f1f1;
+// }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444444;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+}

@@ -92,6 +92,8 @@ class newCategoryView {
     function AddTaskButtonHandler(e) {
       e.preventDefault();
 
+      if (inputValue.value === '' || inputValue.value.length > 25) return;
+
       const color = Array.from(
         document.querySelectorAll('input[name="colors"]')
       ).filter((e) => e.checked === true)[0].id;

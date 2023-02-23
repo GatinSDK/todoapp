@@ -195,6 +195,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: var(--font-color-dark);
@@ -317,4 +318,32 @@ svg {
 
 button {
   font-family: 'Roboto', sans-serif;
+}
+
+.made {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  z-index: 1;
+
+  p {
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    svg {
+      fill: var(--icon-color-red);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--icon-color-red);
+    }
+  }
 }

@@ -28,6 +28,7 @@ function addNewCategory(data) {
   state.push(data);
   menuView.render(state);
   menuView.addHandlerRender(addNewCategoryOpen);
+  addCategoryCloseHandler();
 
   document.querySelector('.active').classList.remove('active');
   document.querySelector(`[data-uuid="${active}"]`).classList.add('active');
@@ -50,6 +51,7 @@ function addEditCategory(data, categoryIndex) {
 
   menuView.render(state);
   menuView.addHandlerRender(addNewCategoryOpen);
+  addCategoryCloseHandler();
 
   document.querySelector('.active').classList.remove('active');
   document.querySelector(`[data-uuid="${active}"]`).classList.add('active');
@@ -107,6 +109,7 @@ function addNewTask(data) {
   document.querySelector(`[data-uuid="${active}"]`).classList.add('active');
 
   menuView.addHandlerRender(addNewCategoryOpen);
+  addCategoryCloseHandler();
 
   taskView.addTaskHandler(addNewTask);
 
@@ -139,6 +142,7 @@ function addTaskCheck(data) {
   document.querySelector(`[data-uuid="${active}"]`).classList.add('active');
 
   menuView.addHandlerRender(addNewCategoryOpen);
+  addCategoryCloseHandler();
 
   taskView.addTaskHandler(addNewTask);
   statePersistent(state);
@@ -153,6 +157,7 @@ function deleteCategory(data) {
 
   menuView.render(state);
   menuView.addHandlerRender(addNewCategoryOpen);
+  addCategoryCloseHandler();
   taskView.render(state);
   taskView.taskCheckHandler(addTaskCheck);
   taskView.taskDeleteHandler(taskDelete);
@@ -182,6 +187,7 @@ function taskDelete(data) {
   document.querySelector(`[data-uuid="${active}"]`).classList.add('active');
 
   menuView.addHandlerRender(addNewCategoryOpen);
+  addCategoryCloseHandler();
 
   taskView.addTaskHandler(addNewTask);
   statePersistent(state);
@@ -191,6 +197,7 @@ function init() {
   menuView.render(state);
   menuView.addHandlerRender(addNewCategoryOpen);
   menuView.changeCategoryActive(changeCategoryTasks);
+  addCategoryCloseHandler();
   newCategoryView.cancelWindow(closeNewCategory);
   // newCategoryView.addTaskCategory(addNewCategory);
   taskView.render(state);
@@ -207,8 +214,10 @@ document.querySelector('.menu-close').addEventListener('click', function () {
   document.querySelector('.menu').classList.remove('menu-opened');
 });
 
-document.querySelectorAll('.category').forEach((element) =>
-  element.addEventListener('click', function () {
-    document.querySelector('.menu').classList.remove('menu-opened');
-  })
-);
+function addCategoryCloseHandler() {
+  document.querySelectorAll('.category').forEach((element) =>
+    element.addEventListener('click', function () {
+      document.querySelector('.menu').classList.remove('menu-opened');
+    })
+  );
+}

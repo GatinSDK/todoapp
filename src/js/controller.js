@@ -206,3 +206,9 @@ init();
 document.querySelector('.menu-close').addEventListener('click', function () {
   document.querySelector('.menu').classList.remove('menu-opened');
 });
+
+document.querySelectorAll('.category').forEach((element) =>
+  element.addEventListener('click', function () {
+    document.querySelector('.menu').classList.remove('menu-opened');
+  })
+);

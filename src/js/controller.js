@@ -2,7 +2,7 @@ import menuView from './views/menuView';
 import taskView from './views/taskView';
 import newCategoryView from './views/newCategoryView';
 
-var state = JSON.parse(localStorage.getItem('state'));
+let state = JSON.parse(localStorage.getItem('state'));
 
 if (!state) {
   state = [

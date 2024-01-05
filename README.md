@@ -20,6 +20,8 @@ npm run dev
 
 ![Preview 1](https://i.imgur.com/kVuDqJh.png)
 
+![Preview 1](https://i.imgur.com/BJVBYKQ.png)
+
 ![Preview 2](https://i.imgur.com/NsB2qqN.png)
 
 ![Preview 2](https://i.imgur.com/PKx7KlM.png)

@@ -32,21 +32,26 @@ class TaskView {
   }
 
   addTaskHandler(handler) {
-    document.querySelector('.addtask').addEventListener('click', function () {
-      const inputValue = document.querySelector('.addtaskinput');
+    document
+      .querySelector('.addtask__form')
+      .addEventListener('submit', function (e) {
+        e.preventDefault();
+        console.log('submit');
 
-      if (inputValue.value === '' || inputValue.value.length > 50) return;
+        const inputValue = document.querySelector('.addtaskinput');
 
-      const data = {
-        uuid: uuidv4(),
-        status: 'unchecked',
-        name: inputValue.value,
-      };
+        if (inputValue.value === '' || inputValue.value.length > 50) return;
 
-      inputValue.value = '';
+        const data = {
+          uuid: uuidv4(),
+          status: 'unchecked',
+          name: inputValue.value,
+        };
 
-      handler(data);
-    });
+        inputValue.value = '';
+
+        handler(data);
+      });
   }
 
   deleteCategoryHandler(handler) {

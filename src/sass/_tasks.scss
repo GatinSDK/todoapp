@@ -357,3 +357,12 @@
     -o-transition: all 0.3s;
   }
 }
+
+.addtask__button {
+  background: none;
+  border: none;
+  &:hover {
+    background: none;
+    cursor: pointer;
+  }
+}

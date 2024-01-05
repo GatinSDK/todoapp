@@ -200,23 +200,27 @@
         <div class="task__category"></div>
 
         <div class="task__list">
-          <label for="newtask">
-            <div class="newtask">
-              <div class="task__info">
-                <div class="addtask">
-                  <svg class="w-6 h-6 addtask-icon">
-                    <use href="src/img/icons.svg#plus"></use>
-                  </svg>
+          <form action="" class="addtask__form">
+            <label for="newtask">
+              <div class="newtask">
+                <div class="task__info">
+                  <button type="submit" class="addtask__button">
+                    <div class="addtask">
+                      <svg class="w-6 h-6 addtask-icon">
+                        <use href="src/img/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <input
+                    type="text"
+                    id="newtask"
+                    class="addtaskinput"
+                    placeholder="Add a new task (max 50 characters)"
+                  />
                 </div>
-                <input
-                  type="text"
-                  id="newtask"
-                  class="addtaskinput"
-                  placeholder="Add a new task (max 50 characters)"
-                />
               </div>
-            </div>
-          </label>
+            </label>
+          </form>
 
           <div class="tasks__container"></div>
         </div>

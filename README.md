@@ -14,7 +14,7 @@ npm run dev
 ## Features
 - Add, delete, check and uncheck tasks 
 - Add, edit and delete categories with their selected icon and color
-- All changes saves on LocalStorage
+- All changes saves by LocalStorage
 
 ## Preview
 

@@ -36,7 +36,6 @@ class TaskView {
       .querySelector('.addtask__form')
       .addEventListener('submit', function (e) {
         e.preventDefault();
-        console.log('submit');
 
         const inputValue = document.querySelector('.addtaskinput');
 
